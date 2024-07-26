@@ -11,6 +11,11 @@ int main()
     b=(int*)malloc(m*sizeof(int));
     u=(int*)malloc((m+n)*sizeof(int));
     i=(int*)malloc(n*sizeof(int));
+    if(a==NULL||b==NULL||u==NULL||i==NULL)
+    {
+        printf("Memory allocation failed");
+        exit(0);
+    }
     printf("Enter %d elements for 1st array:\n",n);
     for(j=0;j<n;j++)
     {
