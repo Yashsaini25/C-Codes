@@ -9,7 +9,7 @@ int main()
     if(a==NULL)
     {
         printf("Memory allocation failed");
-        exit(0);
+        exit(1);
     }
     printf("Enter %d elements:\n",n);
     for(i=0;i<n;i++)
@@ -30,5 +30,6 @@ int main()
     printf("4th non-repeating element is: ");
     printf("%d",*(a+ind));
     printf("\n");
+    free(a);
     return 0;
 }
