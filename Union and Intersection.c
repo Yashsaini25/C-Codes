@@ -14,7 +14,7 @@ int main()
     if(a==NULL||b==NULL||u==NULL||i==NULL)
     {
         printf("Memory allocation failed");
-        exit(0);
+        exit(1);
     }
     printf("Enter %d elements for 1st array:\n",n);
     for(j=0;j<n;j++)
@@ -64,6 +64,10 @@ int main()
     for(j=0;j<l;j++)
     printf(" %d",*(i+j));
     printf("\n");
+    free(a);
+    free(b);
+    free(u);
+    free(i);
     return 0;
 
 }
